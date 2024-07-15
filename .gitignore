@@ -1,0 +1,6 @@
+.env
+.DS_Store
+code/__pycache__/
+code/cmaes.jl
+code/eb.jl
+code/estimate_mixture.jl
