@@ -192,28 +192,19 @@ print(f"number of players in mengel: {len(data_mengel.id.unique())}")
 
 
 data_state_25 = data_prob[data_prob['[0,0.25)'] == 1]
-utils.save_hist(data_state_25.hist(column='a', bins=5, range=(0,1)), 'action', 'frequency', 'Distribution of action when previous state was [0,0.25)', 'state1.png')
+utils.save_hist(data_state_25, 'a', 5, 'action', 'frequency', r'Distribution of action when $h = [0, 0.25)$', 'distribution', 'state1.png')
 
 data_state_50 = data_prob[data_prob['[0.25,0.5)'] == 1]
-utils.save_hist(data_state_50.hist(column='a', bins=5, range=(0,1)), 'action', 'frequency', 'Distribution of action when previous state was [0.25,0.5)', 'state2.png')
+utils.save_hist(data_state_50, 'a', 5, 'action', 'frequency', r'Distribution of action when $h = [0.25, 0.5)$', 'distribution', 'state2.png')
 
 data_state_75 = data_prob[data_prob['[0.5,0.75)'] == 1]
-utils.save_hist(data_state_75.hist(column='a', bins=5, range=(0,1)), 'action', 'frequency', 'Distribution of action when previous state was [0.5,0.75)', 'state3.png')
+utils.save_hist(data_state_75, 'a', 5, 'action', 'frequency', r'Distribution of action when $h = [0.5, 0.75)$', 'distribution', 'state3.png')
 
 data_state_1 = data_prob[data_prob['[0.75,1]'] == 1]
-utils.save_hist(data_state_1.hist(column='a', bins=5, range=(0,1)), 'action', 'frequency', 'Distribution of action when previous state was [0.75,1]', 'state4.png')
+utils.save_hist(data_state_1, 'a', 5, 'action', r'frequency', 'Distribution of action when $h = [0.75, 1]$', 'distribution', 'state4.png')
 
-data_state_20 = data_prob[data_prob['[0,0.20)'] == 1]
-utils.save_hist(data_state_20.hist(column='a', bins=5, range=(0,1)), 'action', 'frequency', 'Distribution of action when previous state was [0,0.20)', 'state5.png')
-
-data_state_40 = data_prob[data_prob['[0.20,0.40)'] == 1]
-utils.save_hist(data_state_40.hist(column='a', bins=5, range=(0,1)), 'action', 'frequency', 'Distribution of action when previous state was [0.20,0.40)', 'state6.png')
-
-data_state_60 = data_prob[data_prob['[0.40,0.60)'] == 1]
-utils.save_hist(data_state_60.hist(column='a', bins=5, range=(0,1)), 'action', 'frequency', 'Distribution of action when previous state was [0.40,0.60)', 'state7.png')
-
-data_state_80 = data_prob[data_prob['[0.60,0.80)'] == 1]
-utils.save_hist(data_state_80.hist(column='a', bins=5, range=(0,1)), 'action', 'frequency', 'Distribution of action when previous state was [0.60,0.80)', 'state8.png')
-
-data_state_100 = data_prob[data_prob['[0.80,1]'] == 1]
-utils.save_hist(data_state_100.hist(column='a', bins=5, range=(0,1)), 'action', 'frequency', 'Distribution of action when previous state was [0.80,1]', 'state9.png')
+#data_state_20 = data_prob[data_prob['[0,0.20)'] == 1]
+#data_state_40 = data_prob[data_prob['[0.20,0.40)'] == 1]
+#data_state_60 = data_prob[data_prob['[0.40,0.60)'] == 1]
+#data_state_80 = data_prob[data_prob['[0.60,0.80)'] == 1]
+#data_state_100 = data_prob[data_prob['[0.80,1]'] == 1]

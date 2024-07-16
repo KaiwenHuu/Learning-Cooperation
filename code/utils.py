@@ -72,11 +72,16 @@ def save_2d_plot(x, y_list, xlabel, ylabel, title, path, filename, legend, ylim)
     print(f"Figure saved at {fig_path}")
     plt.close()
 
-def save_hist(plot, xlabel, ylabel, title, filename):
+def save_hist(df, column_name, bins, xlabel, ylabel, title, path, filename, ylim=[0,1]):
+    ax = df.hist(column = column_name, bins=bins, range=(0,1), weights=np.ones(len(df))/len(df))
     plt.title(title)
     plt.xlabel(xlabel)
     plt.ylabel(ylabel)
-    fig_path = os.path.join(FIGS_DIR, filename)
+    directory = os.path.join(FIGS_DIR, path)
+    os.makedirs(directory, exist_ok=True)
+    if ylim is not None:
+        plt.ylim(ylim[0], ylim[1])
+    fig_path = os.path.join(directory, filename)
     plt.savefig(fig_path)
     print(f"Figure saved at {fig_path}")
     plt.close()
