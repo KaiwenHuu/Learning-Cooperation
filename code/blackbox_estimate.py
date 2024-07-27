@@ -6,7 +6,6 @@ import numpy as np
 import os
 import pandas as pd
 
-from nn import NeuralNetClassifier
 #TODO: add more columns to make it more high dimensional
 COLUMNS = [
         'a',
@@ -74,14 +73,14 @@ def get_acc_and_mse(X_train, y_train, X_test, y_test, K_range, acc_path, loss_pa
 
         acc_row = pd.DataFrame(
                 {'k': [K],
-                 'nn': [nn_acc],
+                 'mlp': [nn_acc],
                  #'mlp': [mlp_clf_acc],
                  'gbt': [gbt_acc]}
                  #'lasso': [lasso_acc]}
                 )
         loss_row = pd.DataFrame(
                 {'k': [K],
-                 'nn': [nn_loss],
+                 'mlp': [nn_loss],
                  #'mlp': [mlp_clf_mse],
                  'gbt': [gbt_loss],
                  'ols': [ols_loss],

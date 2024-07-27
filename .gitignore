@@ -4,3 +4,5 @@ code/__pycache__/
 code/cmaes.jl
 code/eb.jl
 code/test.jl
+paper*
+references*
